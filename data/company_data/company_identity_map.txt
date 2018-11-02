@@ -1,0 +1,26 @@
+co_code|Prowess company code|Code
+company_name|Prowess company name|Text
+short_name|Short name|Text
+cin_code|MCA's CIN code|Code
+isin_code_equity|ISIN code|Code
+entity_type_code|Entity type code|Code
+mr_entity_type_name|Entity type|Text
+owner_code|Ownership code|Code
+owner_gp_name|Ownership|Text
+co_industry_type|Industry type|Code
+nic_prod_code|NIC code|Code
+nic_name|NIC name|Text
+nse_symbol|NSE symbol|Text
+bse_scrip_code|BSE scrip code|Code
+bse_code|BSE code|Code
+bse_scrip_id|BSE scrip id|Code
+bse_listing_flag|BSE group|Text
+nse_first_traded_date|First trading date on NSE|Date
+nse_suspended_from_date|Date of suspension on NSE|Date
+nse_suspended_to_date|Date of end of suspension on NSE|Date
+nse_delist_date|Delisting date on NSE|Date
+bse_first_traded_date|First trading date on BSE|Date
+bse_suspended_from_date|Date of suspension on BSE|Date
+bse_suspended_to_date|Date of end of suspension on BSE|Date
+bse_delist_date|Delisting date on BSE|Date
+regdpin|Registered office pincode|Number
