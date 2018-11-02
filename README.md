@@ -116,6 +116,6 @@
 
 > #### How to run ?
 >
-> 1. Run only the Module - "model" as the other modules/notebooks are related to web scrapping and cleaning of the data. 
+> 1. Run only the Module - "model" as the other modules/notebooks are related to cleaning and restructuring of the data. 
 > 2. Run flask app -> python app.py
 
