@@ -65,7 +65,7 @@
 >       Notebook to combine financial data, market data, and setup features which will be used by the model. We will be setting our target 'delisted' as 0 - company is still listed 1 - company delisted
 >       Listed Companies - We take data from 2017 Delisted Companies - Companies that were delisted from 2015 onwards we look at their last available information.
 >
-> 2. **model** - notebooks for data_cleaning and encoding
+> 2. **model** - notebooks for modeling and using the model
 >
 >    1. **model.ipynb**
 >
