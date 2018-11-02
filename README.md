@@ -65,7 +65,7 @@
 >       Notebook to combine financial data, market data, and setup features which will be used by the model. We will be setting our target 'delisted' as 0 - company is still listed 1 - company delisted
 >       Listed Companies - We take data from 2017 Delisted Companies - Companies that were delisted from 2015 onwards we look at their last available information.
 >
-> 2. **model** - notebooks for data_cleaning and encoding
+> 2. **model** - notebooks for modeling and using the model
 >
 >    1. **model.ipynb**
 >
@@ -75,34 +75,21 @@
 >
 >       This is a notebook that loads the final pickled model and uses it with data from 2018 to predict which companies may delist and which companies are safe. 
 >
-> 3. **model**
 >
->    1. **explore_correlations.ipynb**
->
->       Explore  the data, look at correlations and try feature engineering
->
->    2. **model_1_linear_regression.ipynb**
->
->       Prepare multiple linear regression models and figure out which feature to remove / transform.
->
->    3. **model_2_final.ipynb**
->
->       Lasso and Ridege crossvalidation, compare several models and select best model. Test the model.
->
-> 4. **data** - all csv files
+> 5. **data** - all csv files
 >
 >    1. model_data_india.csv - data ready for modeling
 >    2. crystal_ball_web_ready.csv - data from 2018 to be used in the app for predicting future outcomes
 >
-> 5. **templates**
+> 6. **templates**
 >
 >    1. Index.html - landing page for flask app
 >
-> 6. **app.py** 
+> 7. **app.py** 
 >
 >    1. Flask app for predicting delisting
 >
-> 7. **docs** - documents 
+> 8. **docs** - documents 
 >
 >    1. Proposal - Proposal_McNulty.pdf
 >
@@ -116,6 +103,6 @@
 
 > #### How to run ?
 >
-> 1. Run only the Module - "model" as the other modules/notebooks are related to web scrapping and cleaning of the data. 
+> 1. Run only the Module - "model" as the other modules/notebooks are related to cleaning and restructuring of the data. 
 > 2. Run flask app -> python app.py
 
