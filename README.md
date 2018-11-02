@@ -1,11 +1,16 @@
-# Predicted Pre-owned Car Prices
+# Predict Stock Market Delisting in India 
 
-### Project Luther
+### Project McNulty
 
 > #### Datasets
-> Web scrapping from www.carmax.com
->  1.  1700 + webscraped data points
->  2.  30+ parameters
+> Financial Statement data from Prowess Dx, India
+>
+> Stock Market data from Prowess Dx, India
+>
+> Company Identity data from Prowess Dx, India 
+>
+>  1.  4770 data point (class 0 = 4295, class 1 = 475 )
+>  2.  92 features
 
 
 
@@ -15,49 +20,60 @@
 > 2. Pandas
 > 3. Matplotlib
 > 4. Seaborn
-> 5. Selenium
-> 6. Statsmodel
-> 7. Sklearn
-> 8. Powerpoint
-> 9. Typora
-> 10. Jupyter Notebooks
+> 5. Flask
+> 6. Javascript
+> 7. HTML
+> 8. Tableau
+> 9. Statsmodel
+> 10. Sklearn
+> 11. Powerpoint
+> 12. Typora
+> 13. Jupyter Notebooks
 
 
 
 > #### Algorithms
 >
-> 1. Simple linear regression
-> 2. Lasso and Ridge Regression
-> 3. Cross-validation
+> 1. K- nearest neighbors
+> 2. Logistic Regression
+> 3. Support Vector Machine
+> 4. Decision Trees
+> 5. Random Forest
+> 6. Gradient Boosting
+> 7. Principle Component Analysis
 
 
 
 > #### Modules 
 >
-> 1. **data_collection** - contains notebooks for web scrapping 
+> 1. **clean_restructure** - contains notebooks for cleaning data and restructuring for modeling
 >
->    1. **grab_links.ipynb** 
+>    1. **identity_clean_data.ipynb** 
 >
->       This notebook goes to the carmax website and grabs basic information on the cars from their banners. We typically have 50 banners per page after which it goes to the next button to keep pulling 50 banners at a time automatically. Most importantly it grabs the stockno (viz the unique identifier for a car).  Using this stockno we can generate links to the car's individual page. 
+>       Notebook to clean the list of company identities and find out which ones were listed and which ones were delisted
 >
->    2. **page_scrap.ipynb**
+>    2. **financial_statements_clean.ipynb**
 >
->       This notebook creates go to a car's individual page by generating the link "https://www.carmax.com/car/"+ str (stock_num). It goes to this page and scraps the key details such as miles, color and then clicks on "see all  specifications" which takes us to a detailed description of the car.
+>       Notebook to clean the financial statements for our companies of interest. These are financial statement data ie information from balance sheets, income statement etc. for different years for all companies 
 >
-> 2. **data_cleaning** - notebooks for data_cleaning and encoding
+>    3. **market_data_clean.ipynb**
 >
->    1. clean_data.ipynb
+>       Clean stock market data and aggregate at annual level for each company
 >
->       Notebook that cleans all my data and outputs to final_data.csv
+>    4. **make_model_data**
 >
->    2. encoding_data.ipynb
+>       Notebook to combine financial data, market data, and setup features which will be used by the model. We will be setting our target 'delisted' as 0 - company is still listed 1 - company delisted
+>       Listed Companies - We take data from 2017 Delisted Companies - Companies that were delisted from 2015 onwards we look at their last available information.
 >
->       This notebook reads the final_data.csv and prepares model_data.csv which can be used to run models. The notebook encodes categorical features such as 
+> 2. **model** - notebooks for data_cleaning and encoding
 >
->       - brand - luxury or not 
->       - interior_color - black or not
->       - exterior_color - dark colors (black, brown ..), light colors (white, silver ..), prime colors (red, gold,blue ..
->       - engine_type (normal, turbo or alternate)
+>    1. **model.ipynb**
+>
+>       Notebook for trying out various modeling algorithmns
+>
+>    2. **use_final_model.ipynb**
+>
+>       This is a notebook that loads the final pickled model and uses it with data from 2018 to predict which companies may delist and which companies are safe. 
 >
 > 3. **model**
 >
@@ -73,22 +89,33 @@
 >
 >       Lasso and Ridege crossvalidation, compare several models and select best model. Test the model.
 >
-> 4. **data** - all csv files 
+> 4. **data** - all csv files
 >
->    1. final_data.csv - cleaned final data
->    2. model_data.csv - data ready for modelling
+>    1. model_data_india.csv - data ready for modeling
+>    2. crystal_ball_web_ready.csv - data from 2018 to be used in the app for predicting future outcomes
 >
-> 5. **docs** - documents 
+> 5. **templates**
 >
->    1. Proposal - Proposal.pages / Proposal.pdf
->    2. Presentation - PREDICTING USED CAR PRICES.pdf
->    3. Summary - Summary.pages / Summary.pdf
+>    1. Index.html - landing page for flask app
+>
+> 6. **app.py** 
+>
+>    1. Flask app for predicting delisting
+>
+> 7. **docs** - documents 
+>
+>    1. Proposal - Proposal_McNulty.pdf
+>
+>    2. Presentation - PredictDelisting.pdf
+>
+>    3. Summary - Summary_Predict_Delisting.pdf
+>
 >
 
 
 
 > #### How to run ?
 >
-> 1. Run only the Module - "model" as the other modules/notebooks are related to web scrapping and
->     cleaning of the data. Their ouput is stored in the data files - final_data.csv and model_data.csv 
+> 1. Run only the Module - "model" as the other modules/notebooks are related to web scrapping and cleaning of the data. 
+> 2. Run flask app -> python app.py
 
